@@ -310,4 +310,13 @@ body.light .article-content a:hover {
     font-size: 0.875rem;
     margin-top: 0.5rem;
     text-align: center;
+}
+
+.nested-content {
+    margin-left: 2em;  /* Adds indentation */
+    margin-bottom: 1em; /* Adds some space below the list */
+}
+
+.nested-content ul {
+    margin-top: 0.5em;  /* Adds some space above the list */
 } 
