@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://deviyer.com/sitemap.xml 
