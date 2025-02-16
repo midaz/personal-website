@@ -7,6 +7,7 @@
     --accent-dark: #999999;
     --hover-dark: #a8a8a8;
     --hover-light: #444444;
+    --link-dark: #a8b8ff;  /* Soft blue */
 }
 
 * {
@@ -92,6 +93,22 @@ main {
 .intro {
     font-size: 1rem;
     margin-bottom: 4rem;
+}
+
+.intro a {
+    color: var(--link-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.intro a:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+body.light .intro a {
+    color: #2563eb;  /* Darker blue for light mode */
 }
 
 .content-section {
