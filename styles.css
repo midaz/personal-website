@@ -1,0 +1,290 @@
+:root {
+    --bg-light: #ffffff;
+    --text-light: #1a1a1a;
+    --bg-dark: #1a1a1a;
+    --text-dark: #ffffff;
+    --accent-light: #666666;
+    --accent-dark: #999999;
+    --hover-dark: #a8a8a8;
+    --hover-light: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+}
+
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.light {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+header {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 0.5rem;
+}
+
+.twitter-link {
+    padding: 0.5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.twitter-icon {
+    width: 16px;
+    height: 16px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.articles article {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.year {
+    color: var(--accent-dark);
+    min-width: 4rem;
+    font-size: 0.75rem;
+}
+
+.articles a {
+    font-size: 0.875rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.articles a:hover {
+    text-decoration: underline;
+    color: var(--hover-dark);
+    transition: color 0.2s ease;
+}
+
+body.light .articles a:hover {
+    color: var(--hover-light);
+}
+
+/* About page specific styles */
+.about-page .about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about-page .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        order: -1;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+footer {
+    max-width: 800px;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--accent-dark);
+    font-size: 0.875rem;
+}
+
+.github-link {
+    color: var(--accent-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+}
+
+body.light .github-link:hover {
+    color: var(--hover-light);
+}
+
+/* Article page styles */
+.article-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.article-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.article-metadata {
+    display: flex;
+    gap: 1rem;
+    color: var(--accent-dark);
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Add styles for different content elements */
+.article-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.article-content h3 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.article-content code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.875em;
+}
+
+.article-content pre {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.article-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.article-content a:hover {
+    color: var(--hover-dark);
+}
+
+body.light .article-content a:hover {
+    color: var(--hover-light);
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Optional: Add a figure wrapper for images with captions */
+.article-content figure {
+    margin: 2rem 0;
+}
+
+.article-content figcaption {
+    color: var(--accent-dark);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: center;
+} 
