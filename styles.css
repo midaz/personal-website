@@ -170,9 +170,11 @@ body.light .articles a:hover {
 
 .profile-image img {
     width: 100%;
+    height: auto;
     border-radius: 50%;
     aspect-ratio: 1;
     object-fit: cover;
+    max-width: 400px;
 }
 
 @media (max-width: 768px) {
@@ -319,4 +321,37 @@ body.light .article-content a:hover {
 
 .nested-content ul {
     margin-top: 0.5em;  /* Adds some space above the list */
+}
+
+/* Margin utilities */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* System theme preference */
+@media (prefers-color-scheme: dark) {
+    body:not(.light) {
+        --bg-color: var(--bg-dark);
+        --text-color: var(--text-dark);
+        --accent-color: var(--accent-dark);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body:not(.dark) {
+        --bg-color: var(--bg-light);
+        --text-color: var(--text-light);
+        --accent-color: var(--accent-light);
+    }
+}
+
+/* External link styles */
+a[target="_blank"] {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.2s ease;
+}
+
+a[target="_blank"]:hover {
+    color: var(--hover-color);
 } 

@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Dev Iyer - Product Manager and Founder based in San Francisco. Learn about my background, philosophy, and current work building Graph.">
+    <meta name="keywords" content="Dev Iyer, Product Manager, San Francisco, Graph, Technology, About">
+    <meta name="author" content="Dev Iyer">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="About Dev Iyer - Product Manager & Founder">
+    <meta property="og:description" content="Learn about Dev Iyer's background, philosophy, and current work building Graph in San Francisco.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deviyer.com/about.html">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About Dev Iyer">
+    <meta name="twitter:description" content="Learn about Dev Iyer's background, philosophy, and current work building Graph in San Francisco.">
+    
     <title>About - Dev Iyer</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://x.com">
+    <link rel="preconnect" href="https://github.com">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Dev Iyer",
+        "jobTitle": "Founder",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Graph"
+        },
+        "alumniOf": "University of Georgia",
+        "birthPlace": "Huntsville, Alabama"
+      }
+    }
+    </script>
 </head>
 <body class="dark">
     <header>
@@ -12,12 +49,12 @@
             <h1>Dev Iyer</h1>
             <nav>
                 <a href="index.html">Home</a>
-                <button id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
                         <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
                     </svg>
                 </button>
-                <a href="https://twitter.com/yourusername" target="_blank" class="twitter-link">
+                <a href="https://x.com/dev1yer" target="_blank" rel="noopener" class="twitter-link" aria-label="Follow me on X (formerly Twitter)">
                     <svg class="twitter-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
@@ -31,24 +68,30 @@
         <div class="about-content">
             <div class="about-text">
                 <h2>About</h2>
-                <p>I was born in Huntsville, Alabama and raised in the suburbs of Atlanta, Georgia. I'm an alumni of the University of Georgia. I'm a programmer, designer, and product-builder.</p>
-                <br>
-                <p>I am naturally drawn to humans. To connecting and celebrating humans. I am not drawn towards proving mathematical theorems, engineering complex systems, or fixing the healthcare system. I am drawn to multi-disciplinary perspectives, to liberal arts, to celebrating creativity and art and beauty, to making humans feel like they are living to their full potential. </p>
-                <br>
-                <p>Therefore, I build products for people to connect on a visceral level. I've done this in many ways throughout my career --> helping creators share their art with fans, helping people create communities on the internet, and even investing in entreprenuers that dare to challenge the status quo. </p>   
-                <br>
-                <p>Most of time is now spent thinking and building Graph, but I love to code and build side projects. I'm always looking for talented people to join me on this journey.</p>
-                <br>
-                <p>If you'd like to get in touch, please <a href="mailto:devpiyer@gmail.com">email me</a> or message me on <a href="https://x.com/dev1yer" target="_blank">X</a>.</p>
+                <p class="mb-4">I was born in Huntsville, Alabama and raised in the suburbs of Atlanta, Georgia. I'm an alumni of the University of Georgia. I'm a programmer, designer, and product-builder.</p>
+                
+                <p class="mb-4">I am naturally drawn to humans. To connecting and celebrating humans. I am not drawn towards proving mathematical theorems, engineering complex systems, or fixing the healthcare system. I am drawn to multi-disciplinary perspectives, to liberal arts, to celebrating creativity and art and beauty, to making humans feel like they are living to their full potential.</p>
+                
+                <p class="mb-4">Therefore, I build products for people to connect on a visceral level. I've done this in many ways throughout my career — helping creators share their art with fans, helping people create communities on the internet, and even investing in entrepreneurs that dare to challenge the status quo.</p>   
+                
+                <p class="mb-4">Most of my time is now spent thinking and building Graph, but I love to code and build side projects. I'm always looking for talented people to join me on this journey.</p>
+                
+                <p>If you'd like to get in touch, please <a href="mailto:devpiyer@gmail.com">email me</a> or message me on <a href="https://x.com/dev1yer" target="_blank" rel="noopener">X</a>.</p>
             </div>
             <div class="profile-image">
-                <img src="assets/images/about/deviyer.png" alt="Your Name" />
+                <img 
+                    src="assets/images/about/deviyer.png" 
+                    alt="Dev Iyer - Product Manager and Founder" 
+                    width="400" 
+                    height="400"
+                    loading="lazy"
+                />
             </div>
         </div>
     </main>
     <footer>
-        ©2025 
-        <a href="https://github.com/midaz" target="_blank" class="github-link">
+        <span>©2025 Dev Iyer</span>
+        <a href="https://github.com/midaz" target="_blank" rel="noopener" class="github-link">
             <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.271.098-2.65 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.202 2.397.1 2.65.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
             </svg>
