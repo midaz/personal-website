@@ -152,12 +152,12 @@ h2 {
 
 .articles a:hover {
     text-decoration: underline;
-    color: var(--hover-dark);
+    color: #ff69b4; /* Same pink as about page links */
     transition: color 0.2s ease;
 }
 
 body.light .articles a:hover {
-    color: var(--hover-light);
+    color: #ff69b4; /* Keep consistent in light mode too */
 }
 
 /* About page specific styles */
