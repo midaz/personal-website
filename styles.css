@@ -354,4 +354,24 @@ a[target="_blank"] {
 
 a[target="_blank"]:hover {
     color: var(--hover-color);
-} 
+}
+
+/* Add styles for links in the about-content */
+.about-content a {
+    color: #ff69b4; /* Or any color you prefer */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.about-content a:hover {
+    color: #ff99cc; /* Lighter shade for hover state */
+}
+
+/* For dark mode */
+.dark .about-content a {
+    color: #ff99cc;
+}
+
+.dark .about-content a:hover {
+    color: #ffb3d9;
+}
